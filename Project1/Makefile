@@ -1,18 +1,12 @@
 CC=gcc
-CFLAGS=-I.
-DEPS=
-OBJ=server.o
-USERID=123456789
 
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+all: server client
 
-all: server
-server: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS)
+server:
+	${CC} server.c -o server
 
 client:
-	$(CC) -o $@
+	${CC} client.c -o client
 
 clean:
-	rm -rf *.o server *.tar.gz
+	rm -rf *.o server client *.tar.gz
