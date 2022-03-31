@@ -1,4 +1,5 @@
 // Client side C/C++ program to demonstrate Socket programming
+// Source: https://www.geeksforgeeks.org/socket-programming-cc/
 #include <stdio.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
